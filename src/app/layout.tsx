@@ -1,14 +1,16 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
 
+const BP = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export const metadata: Metadata = {
   title: 'Sleep Debt',
   description: 'Personal sleep debt and impairment tracker',
-  manifest: '/manifest.webmanifest',
+  manifest: `${BP}/manifest.webmanifest`,
   appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Sleep Debt' },
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: `${BP}/icon.svg`,
+    apple: `${BP}/icon.svg`,
   },
 };
 
