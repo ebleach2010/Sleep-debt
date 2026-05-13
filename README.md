@@ -17,14 +17,27 @@ what you took and how you slept.
 
 ## Deploy
 
-One command, from this directory:
+### Option A — GitHub Pages (no signup, runs from this repo)
+
+1. Merge this PR (or push to `main`) — the workflow at
+   `.github/workflows/deploy.yml` builds and publishes automatically.
+2. One-time: in repo **Settings → Pages**, set "Build and deployment source" to
+   **GitHub Actions**.
+3. The URL will be `https://<owner>.github.io/<repo>/` — for this repo,
+   **https://ebleach2010.github.io/sleep-debt/**. Open it in Safari on your
+   phone → Share → "Add to Home Screen".
+
+The workflow sets `NEXT_PUBLIC_BASE_PATH` from the repo name so asset URLs
+resolve correctly under the subpath.
+
+### Option B — Vercel (custom domain easier)
 
 ```bash
 npx vercel --prod
 ```
 
-You'll get a URL like `https://sleep-debt-<hash>.vercel.app`. Open it on your
-phone in Safari → Share → "Add to Home Screen". It runs as a standalone app.
+You'll get a URL like `https://sleep-debt-<hash>.vercel.app`. Same Safari →
+Share → "Add to Home Screen" flow.
 
 ## Local dev
 
