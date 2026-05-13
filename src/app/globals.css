@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #0a0a0b;
+  color: #e8e8ec;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+/* Tabular numerals for any digit shown in stats */
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* Disable iOS tap highlight */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Safe-area padding for installed PWAs */
+.safe-pb { padding-bottom: max(env(safe-area-inset-bottom), 1rem); }
+.safe-pt { padding-top: max(env(safe-area-inset-top), 0.5rem); }
